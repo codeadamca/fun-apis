@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>HTTP Cat</h1>
+
+    <p>
+        A basic API interation using 
+        <a href="https://freeapis.juheapi.com/apis/http-cat">HTTP Cat</a>.
+    </p>
+
+    <div id="image"></div>
+
+    <script>
+
+        async function getImage()
+        {
+
+            let url = "https://http.cat/200";
+
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {},
+            });
+
+            console.log(response);
+
+        }
+
+        getImage();
+
+    </script>
+
+    <img src="https://http.cat/200" />
+    
+</body>
+</html>
